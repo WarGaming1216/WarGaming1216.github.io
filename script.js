@@ -81,6 +81,7 @@ function inicializarPorRuta(){
             let altoN = document.querySelector(".nav").clientHeight;
             let contenedorPW = document.querySelector(".contenedor-prueba");
             contenedorPW.setAttribute("style", `height: calc(100vh - ${altoH}px - ${altoN}px - 37px)`);
+            console.log("Esta parte funciona!");
             break;
         case "inicio.html":
             console.log(fileName);
