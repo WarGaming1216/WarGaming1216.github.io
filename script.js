@@ -23,7 +23,7 @@ async function cargarContenido(id){
     if(id != "inicio"){
         url = `Bandas/${id}.html`;
     }else{
-        url = `${id}.html`;
+        url = `/${id}.html`;
     }
 
     try{
@@ -56,9 +56,9 @@ async function cargarContenido(id){
         console.error("Error en la verificación de la URL:", error);
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('miIframe').src = 'about:blank';
-    });
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     document.getElementById('miFrame').src = 'about:blank';
+    // });
 }
 
 function limpiarIFrame(){
@@ -87,16 +87,15 @@ function inicializarPorRuta(){
             let altoN = document.querySelector(".nav").clientHeight;
             let contenedorPW = document.querySelector(".contenedor-prueba");
             contenedorPW.setAttribute("style", `height: calc(100vh - ${altoH}px - ${altoN}px - 37px)`);
-            console.log("Esta parte funciona!");
             break;
         case "inicio.html":
             console.log(fileName);
             break;
         case "the-warning.html":
             console.log(fileName);
-            let anchoTWHeader = document.querySelector(".tW-header").clientWidth;
-            let H3TW = document.querySelector(".tW-header");
-            H3TW.setAttribute("style", `width: calc(${anchoTWHeader}px + 30px)`)
+            // let anchoTWHeader = document.querySelector(".tW-header").clientWidth;
+            // let H3TW = document.querySelector(".tW-header");
+            // H3TW.setAttribute("style", `width: calc(${anchoTWHeader}px + 30px)`)
 
             let pruebaB = document.getElementById("pruebame");
             pruebaB.addEventListener("click", () => {

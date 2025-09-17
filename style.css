@@ -20,6 +20,10 @@
     grid-area: header;
     background-color: black;
     color: aqua;
+    h1{
+        margin-block-start: 0.35em;
+        margin-block-end: 0.35em;
+    }
 }
 
 .nav{
@@ -28,11 +32,15 @@
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     justify-items: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px 0 5px 0;
     background-color: aquamarine;
     h3:hover{
         color:goldenrod;
     }
+}
+
+.header, .nav, .contenedor-prueba{
+    border-radius: 10px;
 }
 
 .contenedor-prueba{
@@ -43,6 +51,10 @@
         width: 100%;
         height: 100%;
     }
+}
+
+abbr{
+    text-decoration: none;
 }
 
 /*  Inicio      styles  */
@@ -123,9 +135,10 @@ h3{
 }
 
 .menu{
-    visibility: hidden; /*Oculto momentaneamente, deja el espacio*/
+    visibility: visible; /*Oculto momentaneamente, deja el espacio*/
     grid-area: menuI;
     justify-self: center;
+    text-align: center;
     padding-top: 20px;
 }
 
@@ -176,8 +189,20 @@ h3{
 /*  Nomenclatura a7  */
 
 .a7-body{
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "extra imagen topM"
+        "extra quiz quiz"
+        "menuI menuI menuI";
+    grid-template-columns: repeat(3, 1fr);
     background-color: rgb(255, 229, 163);
     color: black;
+}
+
+.a7-extra,.a7-header,.a7-img,.a7-quiz,.a7-top,.menu{
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
 }
 
 .a7-header{
@@ -196,10 +221,14 @@ h3{
 
 .a7-extra{
     grid-area: extra;
+    background-color: brown;
+    /* padding: 0 15px 0 15px; */
 }
 
 .a7-quiz{
     grid-area: quiz;
+    display: flex;
+    flex-direction: column;
 }
 
 /*  Jinjer     Styles  */
