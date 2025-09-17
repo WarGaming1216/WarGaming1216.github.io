@@ -76,7 +76,7 @@ function inicializarPorRuta(){
     const fileName = path.substring(path.lastIndexOf("/") + 1);
 
     switch(fileName){
-        case "index.html" || "/":
+        case "index.html" || "/" || "":
             console.log(fileName);
             let altoH = document.querySelector(".index-grid-item.header").clientHeight;
             let altoN = document.querySelector(".nav").clientHeight;
