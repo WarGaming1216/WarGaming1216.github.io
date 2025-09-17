@@ -72,9 +72,13 @@ function pruebaInicio(){
 //Siempre al final - Código específico de páginas
 function inicializarPorRuta(){
     const path = window.location.pathname;
-    console.log(path);
     let fileName = "";
-    fileName += path.substring(path.lastIndexOf("/") + 1);
+
+    if (path == "/"){
+        fileName = "index.html";
+    }else{
+        fileName = path.substring(path.lastIndexOf("/") + 1);
+    }
 
     switch(fileName){
         case "index.html" || "/" || "" || null:
