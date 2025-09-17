@@ -73,10 +73,11 @@ function pruebaInicio(){
 function inicializarPorRuta(){
     const path = window.location.pathname;
     console.log(path);
-    const fileName = path.substring(path.lastIndexOf("/") + 1);
+    let fileName = "";
+    fileName += path.substring(path.lastIndexOf("/") + 1);
 
     switch(fileName){
-        case "index.html" || "/" || "":
+        case "index.html" || "/" || "" || null:
             console.log(fileName);
             let altoH = document.querySelector(".index-grid-item.header").clientHeight;
             let altoN = document.querySelector(".nav").clientHeight;
